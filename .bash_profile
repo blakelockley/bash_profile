@@ -29,7 +29,6 @@ alias cd=cd_desktop
 alias rm=trash
 alias undo=undo_trash
 
-
 function update_bash_profile() {
 	current=$(date -r .bash_profile +%s)
 	latest=$(cat profile-repo/time)
@@ -46,10 +45,8 @@ function update_bash_profile() {
 	cd profile-repo
 	git add .
 	git commit -m "Updated: $current"
-	git push origin master > /dev/null
+	git push origin master > /dev/null 2>&1
 	cd $OLDPWD
 }
 
 update_bash_profile
-
-
