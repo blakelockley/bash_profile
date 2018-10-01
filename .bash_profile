@@ -30,8 +30,8 @@ alias rm=trash
 alias undo=undo_trash
 
 function update_bash_profile() {
-	current=$(date -r .bash_profile +%s)
-	latest=$(cat profile-repo/time)
+	current=$(date -r ~/.bash_profile +%s)
+	latest=$(cat ~/profile-repo/time)
 
 	if [ $current -le $latest ]
 	then
@@ -40,9 +40,9 @@ function update_bash_profile() {
 
 	echo "Updating remote .bash_profile repo..."
 
-	echo "$current" > profile-repo/time
-	cp .bash_profile profile-repo/.bash_profile
-	cd profile-repo
+	echo "$current" > ~/profile-repo/time
+	cp ~/.bash_profile ~/profile-repo/
+	cd ~/profile-repo
 	git add . 
 	git commit -m "Updated: $current" > /dev/null 2>&1
 	git push origin master > /dev/null 2>&1
