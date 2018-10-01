@@ -38,7 +38,7 @@ function update_bash_profile() {
 		return 0
 	fi
 
-	echo "Updating remote .bash_profile repo!"
+	echo "Updating remote .bash_profile repo..."
 
 	echo "$current" > profile-repo/time
 	cp .bash_profile profile-repo/.bash_profile
