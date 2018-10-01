@@ -39,12 +39,14 @@ function update_bash_profile() {
 		return 0
 	fi
 
+	echo "Updating remote .bash_profile repo!"
+
 	echo "$current" > profile-repo/time
 	cp .bash_profile profile-repo/.bash_profile
 	cd profile-repo
 	git add .
 	git commit -m "Updated: $current"
-	git push origin master
+	git push origin master > /dev/null
 	cd $OLDPWD
 }
 
