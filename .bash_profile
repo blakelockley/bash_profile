@@ -25,7 +25,7 @@ function undo_trash() {
 	mv ~/.Trash/$1 .
 }
 
-alias cd=cd_desktop
+#alias cd=cd_desktop
 alias rm=trash
 alias undo=undo_trash
 
