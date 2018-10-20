@@ -59,8 +59,10 @@ update_bash_profile
 # https://developer.apple.com/library/archive/technotes/tn2450/_index.html
 
 hidutil property --set '{"UserKeyMapping":
-    [{"HIDKeyboardModifierMappingSrc":0x700000052,
-      "HIDKeyboardModifierMappingDst":0x700000051},
      {"HIDKeyboardModifierMappingSrc":0x7000000e5,
       "HIDKeyboardModifierMappingDst":0x700000052}]
 }'
+
+#    [{"HIDKeyboardModifierMappingSrc":0x700000052,
+#      "HIDKeyboardModifierMappingDst":0x700000051},
+
