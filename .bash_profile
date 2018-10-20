@@ -40,7 +40,6 @@ function update_bash_profile() {
 
 	echo "Updating remote .bash_profile repo..."
 
-	echo "$current" > ~/profile-repo/time
 	cp ~/.bash_profile ~/profile-repo/
 	cd ~/profile-repo
 	git add . 
