@@ -61,7 +61,9 @@ update_bash_profile
 hidutil property --set '{"UserKeyMapping":
      [{"HIDKeyboardModifierMappingSrc":0x7000000e5,
       "HIDKeyboardModifierMappingDst":0x700000052}]
-}'
+}' > /dev/null
+
+echo "'right shift' key has been rempapped to up arrow"
 
 #    {"HIDKeyboardModifierMappingSrc":0x700000052,
 #      "HIDKeyboardModifierMappingDst":0x700000051},
