@@ -29,6 +29,24 @@ function undo_trash() {
 alias rm=trash
 alias undo=undo_trash
 
+# The half sized up and down keys are most likely the worst design decision ive ever seen on a laptop keyboard and is extremely annoying. This scrip will remap the right shift to up and the half sized up arrow to down - this will give the feel of a correctly designed keyboard.. atleast to an extent.
+
+# remap:
+# up arrow 0x52 -> down 0x51
+# right shift 0xE5 -> up 0x52
+
+# https://developer.apple.com/library/archive/technotes/tn2450/_index.html
+
+hidutil property --set '{"UserKeyMapping":
+     [{"HIDKeyboardModifierMappingSrc":0x7000000e5,
+      "HIDKeyboardModifierMappingDst":0x700000052}]
+}' > /dev/null
+
+echo "Right shift key has been remapped to up arrow."
+
+#    {"HIDKeyboardModifierMappingSrc":0x700000052,
+#      "HIDKeyboardModifierMappingDst":0x700000051},
+
 function update_bash_profile() {
 	current=$(date -r ~/.bash_profile +%s)
 	latest=$(date -r  ~/profile-repo/.bash_profile +%s)
@@ -50,21 +68,4 @@ function update_bash_profile() {
 
 update_bash_profile
 
-# The half sized up and down keys are most likely the worst design decision ive ever seen on a laptop keyboard and is extremely annoying. This scrip will remap the right shift to up and the half sized up arrow to down - this will give the feel of a correctly designed keyboard.. atleast to an extent.
-
-# remap:
-# up arrow 0x52 -> down 0x51
-# right shift 0xE5 -> up 0x52
-
-# https://developer.apple.com/library/archive/technotes/tn2450/_index.html
-
-hidutil property --set '{"UserKeyMapping":
-     [{"HIDKeyboardModifierMappingSrc":0x7000000e5,
-      "HIDKeyboardModifierMappingDst":0x700000052}]
-}' > /dev/null
-
-echo "'right shift' key has been rempapped to up arrow"
-
-#    {"HIDKeyboardModifierMappingSrc":0x700000052,
-#      "HIDKeyboardModifierMappingDst":0x700000051},
 
