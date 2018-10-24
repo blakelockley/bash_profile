@@ -26,8 +26,8 @@ function undo_trash() {
 }
 
 #alias cd=cd_desktop
-alias rm=trash
-alias undo=undo_trash
+#alias rm=trash
+#alias undo=undo_trash
 
 # The half sized up and down keys are most likely the worst design decision ive ever seen on a laptop keyboard and is extremely annoying. This scrip will remap the right shift to up and the half sized up arrow to down - this will give the feel of a correctly designed keyboard.. atleast to an extent.
 
