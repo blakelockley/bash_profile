@@ -3,7 +3,7 @@
 export PATH=~/flutter/bin:$PATH
 export PATH="$HOME/.fastlane/bin:$PATH"
 export PATH="/anaconda3/bin:$PATH"
-export PATH=/usr/local/Cellar/rabbitmq/<version>/sbin:$PATH
+export PATH=/usr/local/Cellar/rabbitmq/3.7.11/sbin:$PATH
 
 export PYTHONDONTWRITEBYTECODE=0
 
