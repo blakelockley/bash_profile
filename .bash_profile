@@ -3,6 +3,7 @@
 export PATH=~/flutter/bin:$PATH
 export PATH="$HOME/.fastlane/bin:$PATH"
 export PATH="/anaconda3/bin:$PATH"
+export PATH=/usr/local/Cellar/rabbitmq/<version>/sbin:$PATH
 
 export PYTHONDONTWRITEBYTECODE=0
 
@@ -39,12 +40,12 @@ alias python='python3'
 
 # https://developer.apple.com/library/archive/technotes/tn2450/_index.html
 
-hidutil property --set '{"UserKeyMapping":
-     [{"HIDKeyboardModifierMappingSrc":0x7000000e5,
-      "HIDKeyboardModifierMappingDst":0x700000052}]
-}' > /dev/null
+# hidutil property --set '{"UserKeyMapping":
+#      [{"HIDKeyboardModifierMappingSrc":0x7000000e5,
+#       "HIDKeyboardModifierMappingDst":0x700000052}]
+# }' > /dev/null
 
-echo "Right shift key has been remapped to up arrow."
+# echo "Right shift key has been remapped to up arrow."
 
 #    {"HIDKeyboardModifierMappingSrc":0x700000052,
 #      "HIDKeyboardModifierMappingDst":0x700000051},
